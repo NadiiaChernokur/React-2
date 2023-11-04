@@ -40,7 +40,6 @@ export class  App extends Component  {
   }
     
       
-  
   render() {
     const value = (this.state.good > 0 || this.state.neutral > 0 || this.state.bad > 0);
     
@@ -54,10 +53,18 @@ export class  App extends Component  {
         )
          
         }
+          {this.renderStatistic}
+
         
         {/* {value
           ?  <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} /> 
           : <Notification message="There is no feedback"></Notification> 
+              
+        } */}
+
+        {/* {value
+          ? ( <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} /> )
+          : (<Notification message="There is no feedback"></Notification> )
               
         } */}
         
