@@ -15,7 +15,7 @@ export class  App extends Component  {
   statisticPlus = (e) => {
     const keys = Object.keys(this.state);
     const buttonName = e.target.name;;
-    keys.map(value => {
+    keys.forEach(value => {
       const v = value;
       if (buttonName === v) {
         return this.setState(prevState => {
