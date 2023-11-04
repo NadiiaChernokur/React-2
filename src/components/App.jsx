@@ -15,7 +15,8 @@ export class  App extends Component  {
   statisticPlus = (e) => {
     const keys = Object.keys(this.state);
     const buttonName = e.target.name;;
-    keys.map(v => {
+    keys.map(value => {
+      const v = value;
     if (buttonName === v) {
       this.setState(prevState => {
      return {
@@ -29,14 +30,14 @@ export class  App extends Component  {
 
   renderStatistic = () => {
     const value = (this.state.good > 0 && this.state.neutral > 0 && this.state.bad);
-    {
+    
       if (value) {
         return <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} />
       } else {
         return <Notification message="There is no feedback"></Notification>
       }
         
-    }
+    
   }
     
       
