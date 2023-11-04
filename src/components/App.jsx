@@ -17,15 +17,15 @@ export class  App extends Component  {
     const buttonName = e.target.name;;
     keys.map(value => {
       const v = value;
-    if (buttonName === v) {
-      this.setState(prevState => {
-     return {
-        [v]: prevState[v] + 1,
-       }
+      if (buttonName === v) {
+        return this.setState(prevState => {
+          return {
+            [v]: prevState[v] + 1,
+          }
         })
+      }
     }
-    })
-
+      )
   }
 
   renderStatistic = () => {
