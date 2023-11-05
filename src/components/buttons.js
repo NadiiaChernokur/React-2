@@ -1,13 +1,13 @@
-import { Container } from './feedback.styled';
+import { Container, FeedbackButton } from './styled/feedback.styled';
 
 export const Buttons = ({ options, onClick }) => {
   return (
     <Container>
       {options.map(button => {
         return (
-          <button name={button} onClick={onClick}>
+          <FeedbackButton name={button} onClick={onClick}>
             {button}
-          </button>
+          </FeedbackButton>
         );
       })}
     </Container>

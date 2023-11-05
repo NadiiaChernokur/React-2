@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+
 export const Container = styled.div`
-  display: flex;
-  gap: 10px;
-  cursor: pointer;
+  color: #0000ff;
+  text-shadow: 0px 0px 5px #0000ff;
 `;

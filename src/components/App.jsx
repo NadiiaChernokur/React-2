@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Buttons } from "./buttons";
 import { Statistics } from "./statistics";
 import { Notification } from "./notification";
+import { ContainerApp } from "./styled/app.styled";
 
 
 
@@ -45,7 +46,7 @@ export class  App extends Component  {
     const value = (this.state.good > 0 || this.state.neutral > 0 || this.state.bad > 0);
     
     return (
-      <div>
+      <ContainerApp>
         <h1>Please leave feedback</h1>
         <Buttons options={['good', 'neutral', 'bad']} onClick={this.statisticPlus} />
         <h2>Statistics</h2>
@@ -70,7 +71,7 @@ export class  App extends Component  {
         } */}
         
        
-      </div>
+      </ContainerApp>
       
     )
    
